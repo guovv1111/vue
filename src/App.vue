@@ -1,8 +1,6 @@
 <template>
     <div id="app">
         <router-link to="/escript">test</router-link>
-        <!-- <div v-demo:foo.a.b="message"></div>
-        <p v-pin:left="200">Stick me 200px from the top of the page</p> -->
         <router-view/>
     </div>
 </template>
