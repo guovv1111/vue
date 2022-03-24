@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no" />
+    <title>vue</title>
+    <script type="text/javascript">
+        (function flexible(window, document) {
+            var docEl = document.documentElement;
+            function setRemUnit() {
+                var width = docEl.getBoundingClientRect().width;
+                var rem = width / 8.28;
+                rem = parseFloat(rem.toFixed(3));
+                docEl.style.fontSize = rem + 'px';
+                var realitySize = parseFloat(window.getComputedStyle(document.documentElement).fontSize);
+                if (rem !== realitySize) {
+                    rem = rem * rem / realitySize;
+                    docEl.style.fontSize = rem + 'px';
+                }
+            }
+            // reset rem unit on page resize
+            window.addEventListener('resize', setRemUnit);
+            setRemUnit();
+        }(window, document));
+    </script>
+    <!-- <script>
+        document.write("<script src='https://var----h5----var.kskwai.com/udata/pkg/KS-GAME-WEB/api.b9553590c0f20e50.js?v=" + Date.now() + "'><\/script>");
+    </script> -->
+</head>
+
+<body>
+    <div id="app"></div>
+</body>
+
+</html>
